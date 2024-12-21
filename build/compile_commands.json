@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/mrdeun/Workspace/C-Raycaster/build",
+  "command": "/usr/lib64/ccache/cc  -isystem /usr/include/SDL2 -g -o CMakeFiles/C-Raycaster.dir/src/main.c.o -c /home/mrdeun/Workspace/C-Raycaster/src/main.c",
+  "file": "/home/mrdeun/Workspace/C-Raycaster/src/main.c",
+  "output": "CMakeFiles/C-Raycaster.dir/src/main.c.o"
+}
+]

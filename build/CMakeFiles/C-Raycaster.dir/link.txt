@@ -1,0 +1,1 @@
+/usr/lib64/ccache/cc -g "CMakeFiles/C-Raycaster.dir/src/main.c.o" -o C-Raycaster  /usr/lib64/libSDL2main.a /usr/lib64/libSDL2-2.0.so.0.3000.9
