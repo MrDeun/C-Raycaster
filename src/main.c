@@ -39,7 +39,7 @@ void fillBuffer(Color *buf, Color color) {
 }
 
 Uint32 packColor(Color color) {
-  Uint32 packet = color.a << 24 | color.g << 16 | color.b << 8 | color.a;
+  Uint32 packet = color.r << 24 | color.g << 16 | color.b << 8 | color.a;
   return packet;
 }
 
@@ -67,8 +67,7 @@ Color red;
 
 int main(int, char **) {
   SDL_Init(SDL_INIT_VIDEO);
-  SDL_Window *window = SDL_CreateWindow("Raycayster", 0, 0, WIDTH, HEIGHT,
-                                        SDL_WINDOW_BORDERLESS);
+  SDL_Window *window = SDL_CreateWindow("Raycayster", 0, 0, WIDTH, HEIGHT,SDL_WINDOW_SHOWN);
   SDL_Surface *surface = SDL_GetWindowSurface(window);
   Color *buffer = malloc(sizeof(Color) * WIDTH * HEIGHT);
   red = create_color(255, 0, 0, 0);
