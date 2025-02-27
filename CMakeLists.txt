@@ -12,9 +12,18 @@ FetchContent_Declare(
 )
 
 set(BUILD_EXAMPLES OFF CACHE INTERNAL "")
+
 FetchContent_MakeAvailable(raylib)
+FetchContent_Declare(
+    fmt 
+    URL https://github.com/fmtlib/fmt/releases/download/11.1.4/fmt-11.1.4.zip
+    FIND_PACKAGE_ARGS 11.1.4
+)
+FetchContent_MakeAvailable(fmt)
+
 
 set(SOURCE_FILES src/main.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} raylib)
+target_link_libraries(${PROJECT_NAME} fmt)
