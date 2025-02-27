@@ -1,8 +1,8 @@
 [
 {
   "directory": "/home/mrdeun/Workspace/C-Raycaster/build",
-  "command": "/usr/lib64/ccache/gcc -isystem /usr/include/SDL2 -g -o CMakeFiles/C-Raycaster.dir/src/main.c.o -c /home/mrdeun/Workspace/C-Raycaster/src/main.c",
-  "file": "/home/mrdeun/Workspace/C-Raycaster/src/main.c",
-  "output": "CMakeFiles/C-Raycaster.dir/src/main.c.o"
+  "command": "/usr/lib64/ccache/g++ -g -o CMakeFiles/C-Raycaster.dir/src/main.cpp.o -c /home/mrdeun/Workspace/C-Raycaster/src/main.cpp",
+  "file": "/home/mrdeun/Workspace/C-Raycaster/src/main.cpp",
+  "output": "CMakeFiles/C-Raycaster.dir/src/main.cpp.o"
 }
 ]
