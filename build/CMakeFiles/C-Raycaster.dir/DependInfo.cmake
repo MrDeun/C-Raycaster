@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/mrdeun/Workspace/C-Raycaster/src/main.c" "CMakeFiles/C-Raycaster.dir/src/main.c.o" "gcc" "CMakeFiles/C-Raycaster.dir/src/main.c.o.d"
+  "/home/mrdeun/Workspace/C-Raycaster/src/main.cpp" "CMakeFiles/C-Raycaster.dir/src/main.cpp.o" "gcc" "CMakeFiles/C-Raycaster.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

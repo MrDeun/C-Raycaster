@@ -1,19 +1,19 @@
 [
 {
   "directory": "/home/mrdeun/Workspace/C-Raycaster/build",
-  "command": "/usr/lib64/ccache/g++ -I/home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-src/include -g -o CMakeFiles/C-Raycaster.dir/src/main.cpp.o -c /home/mrdeun/Workspace/C-Raycaster/src/main.cpp",
+  "command": "/usr/lib64/ccache/c++  -I/home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-src/include -g -o CMakeFiles/C-Raycaster.dir/src/main.cpp.o -c /home/mrdeun/Workspace/C-Raycaster/src/main.cpp",
   "file": "/home/mrdeun/Workspace/C-Raycaster/src/main.cpp",
   "output": "CMakeFiles/C-Raycaster.dir/src/main.cpp.o"
 },
 {
-  "directory": "/home/mrdeun/Workspace/C-Raycaster/build",
-  "command": "/usr/lib64/ccache/g++ -I/home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-src/include -g -o _deps/fmt-build/CMakeFiles/fmt.dir/src/format.cc.o -c /home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-src/src/format.cc",
+  "directory": "/home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-build",
+  "command": "/usr/lib64/ccache/c++  -I/home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-src/include -g -o CMakeFiles/fmt.dir/src/format.cc.o -c /home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-src/src/format.cc",
   "file": "/home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-src/src/format.cc",
   "output": "_deps/fmt-build/CMakeFiles/fmt.dir/src/format.cc.o"
 },
 {
-  "directory": "/home/mrdeun/Workspace/C-Raycaster/build",
-  "command": "/usr/lib64/ccache/g++ -I/home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-src/include -g -o _deps/fmt-build/CMakeFiles/fmt.dir/src/os.cc.o -c /home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-src/src/os.cc",
+  "directory": "/home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-build",
+  "command": "/usr/lib64/ccache/c++  -I/home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-src/include -g -o CMakeFiles/fmt.dir/src/os.cc.o -c /home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-src/src/os.cc",
   "file": "/home/mrdeun/Workspace/C-Raycaster/build/_deps/fmt-src/src/os.cc",
   "output": "_deps/fmt-build/CMakeFiles/fmt.dir/src/os.cc.o"
 }

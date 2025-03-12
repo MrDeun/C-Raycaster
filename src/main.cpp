@@ -4,6 +4,8 @@
 #include <cmath>
 #include <iostream>
 
+
+#include "map_loader.h"
 const int WIDTH = 1600;
 const int HEIGHT = 900;
 
@@ -16,13 +18,7 @@ typedef struct Player {
   const float Rot_Speed;
 } Player;
 
-const int map[10][10] = {
-    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 1}, {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 1}, {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 1}, {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-};
+Map map;
 
 float fltBool(bool condition) { return condition ? 1.0f : 0.0f; }
 
@@ -46,7 +42,7 @@ void GameLogic(Player *p) {
   Vector2 wish_dir = HandleInput();
   const float newX = p->x + cosf(p->dir) * p->Move_Speed * wish_dir.x;
   const float newY = p->y + sinf(p->dir) * p->Move_Speed * wish_dir.x;
-  if (map[(int)newY][(int)newX] == 0) {
+  if (map.getWallCode(static_cast<int>(p->x),static_cast<int>(p->y)) == FLOOR) {
     p->x = newX;
     p->y = newY;
   }
@@ -67,7 +63,8 @@ void CastRays(const Player *p, const Color &CEILING_COLOR,
     int mapX = static_cast<int>(p->x);
     int mapY = static_cast<int>(p->y);
     
-    // Length of ray from current position to next x or y-side
+    // Length of ray from current position to next x or y-sider than China, Russia, and Iran combined. The Saudi meeting is key 0/
+
     float sideDistX, sideDistY;
     
     // Length of ray from one x or y-side to next x or y-side
@@ -141,10 +138,15 @@ void CastRays(const Player *p, const Color &CEILING_COLOR,
 }
 }
 
+void DrawHUD(){
+  DrawRectangle(0, HEIGHT-100, WIDTH, 100, RED);
+}
+
 int main() {
 
   const Color CEILING_COLOR = {0x55, 0x55, 0x55, 0xff};
   const Color FLOOR_COLOR = {0x33, 0x33, 0x33, 0xff};
+  auto map1 = LoadMap("map01.txt");
   Color *baseColors = createBaseColors();
   Player p = {5.0f, 5.0f, PI / 3.0f, PI / 3.0f, 0.05f, PI / 360.0f};
   SetTargetFPS(60);
@@ -156,6 +158,7 @@ int main() {
     BeginDrawing();
     ClearBackground(WHITE);
     CastRays(&p, CEILING_COLOR, FLOOR_COLOR, baseColors);
+    DrawHUD();
     DrawFPS(10, 10);
     EndDrawing();
   }
